@@ -1,0 +1,17 @@
+<!-- 예제 2-17: PersonalBankingService 빈 정의 -->
+
+<bean id="personalBankingService" class="PersonalBankingService">
+  <constructor-arg index="0" ref="jmsMessageSender" />
+  <constructor-arg index="1" ref="emailMessageSender" />
+  <constructor-arg index="2" ref="webServiceInvoker" />
+</bean>
+
+<bean id="jmsMessageSender" class="JmsMessageSender">
+  .....
+</bean>
+<bean id="webServiceInvoker" class="WebServiceInvoker">
+  .....
+</bean>
+<bean id="emailMessageSender" class="EmailMessageSender">
+  .....
+</bean>

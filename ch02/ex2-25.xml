@@ -1,0 +1,5 @@
+<!-- 예제 2-25: applicationContext.xml - 동일한 클래스의 빈을 두 번 정의하는 예 -->
+
+<bean id="dao" class="sample.spring.chapter02.bankapp.dao.FixedDepositDaoImpl" />
+<bean id="anotherDao"
+      class="sample.spring.chapter02.bankapp.dao.FixedDepositDaoImpl" />

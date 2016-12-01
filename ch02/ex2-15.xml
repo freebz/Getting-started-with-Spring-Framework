@@ -1,0 +1,10 @@
+<!-- 예제 2-15: FixedDepositDaoFactory의 getFixedDepositDao 메서드를 호출해서 반환된 FixedDepositJdbcDao 인스턴스에서 databaseInfo 속성을 설정하는 구성 -->
+
+<bean id="daoFactory" class="FixedDepositDaoFactory" />
+
+<bean id="dao" factory-bean="daoFactory" factory-method="getFixedDepositDao">
+  <constructor-arg index="0" value="jdbc"/>
+  <property name="databaseInfo" ref="databaseInfo"/>
+</bean>
+
+<bean id="databaseInfo" class="DatabaseInfo" />

@@ -1,0 +1,16 @@
+<!-- 예제 2-3: applicationContext.xml - MyBank의 애플레키이션 컨텍스트 XML 파일 -->
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans .....>
+
+  <bean id="controller"
+	class="sample.spring.chapter02.bankapp.controller.FixedDepositControllerImpl">
+    <property name="fixedDepositService" ref="service" />
+  </bean>
+
+  <bean id="service" class="sample.spring.chapter02.bankapp.service.FixedDepositServiceImpl">
+    <property name="fixedDepositDao" ref="dao" />
+  </bean>
+
+  <bean id="dao" class="sample.spring.chapter02.bankapp.dao.FixedDepositHibernateDao"/>
+</beans>

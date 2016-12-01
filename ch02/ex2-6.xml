@@ -1,0 +1,10 @@
+<!-- 예제 2-6: 정적 팩터리 메서드로 생성한 객체 인스턴스 주입 -->
+
+<bean id="service" class="sample.spring.chapter02.bankapp.FixedDepositServiceImpl">
+  <property name="fixedDepositDao" ref="dao" />
+</bean>
+
+<bean id="dao" class="sample.spring.chapter02.basicapp.FixedDepositDaoFactory"
+      factory-method="getFixedDepositDao">
+  <constructor-arg index="0" value="jdbc"/>
+</bean>

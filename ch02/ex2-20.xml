@@ -1,0 +1,7 @@
+<!-- 예제 2-20: 생성자 기반 DI와 세터 기반 DI를 함께 사용 -->
+
+<bean id="dataSource" class="PersonalBankingService">
+  <constructor-arg index="0" ref="jmsMessageSender" />
+  <constructor-arg index="1" ref="emailMessageSender" />
+  <property name="webServiceInvoker" ref="webServiceInvoker" />
+</bean>

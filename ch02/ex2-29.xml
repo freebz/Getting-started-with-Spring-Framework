@@ -1,0 +1,5 @@
+<!-- 예제 2-29: applicationContext.xml - 프로토타입 범위 빈의 예 -->
+
+<bean id="fixedDepositDetails"
+      class="sample.spring.chapter02.bankapp.domain.FixedDepositDetails"
+      scope="prototype" />

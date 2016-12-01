@@ -1,0 +1,11 @@
+<!-- 예제 2-8: FixedDepositDaoFactory의 getFixedDepositDao 메서드를 호출하는 구성 -->
+
+<bean id="daoFactory" class="sample.spring.chapter02.basicapp.FixedDepositDaoFactory" />
+
+<bean id="dao" factory-bean="daoFactory" factory-method="getFixedDepositDao">
+  <constructor-arg index="0" value="jdbc"/>
+</bean>
+
+<bean id="service" class="sample.spring.chapter02.bankapp.FixedDepositServiceImpl">
+  <property name="fixedDepositDao" ref="dao" />
+</bean>

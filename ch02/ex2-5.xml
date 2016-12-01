@@ -1,0 +1,6 @@
+<!-- 예제 2-5: FixedDepositDaoFactory 클래스의 빈 정의 -->
+
+<bean id="dao" class="sample.spring.FixedDepositDaoFactory"
+      factory-method="getFixedDepositDao">
+  <constructor-arg index="0" value="jdbc"/>
+</bean>

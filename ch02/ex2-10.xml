@@ -1,0 +1,17 @@
+<!-- 예제 2-10: PersonalBankingService 클래스와 그 의존성의 빈 정의 -->
+
+<bean id="personalBaningService" class="PersonalBankingService">
+  <property name="emailMessageSender" ref="emailMessageSender" />
+  <property name="jmsMessageSender" ref="jmsMessageSender" />
+  <property name="webServiceInvoker" ref="webServiceInvoker" />
+</bean>
+
+<bean id="jmsMessageSender" class="JmsMessageSender">
+  .....
+</bean>
+<bean id="webServiceInvoker" class="WebServiceInvoker">
+  .....
+</bean>
+<bean id="emailMessageSender" class="EmailMessageSender">
+  .....
+</bean>

@@ -1,0 +1,16 @@
+<!-- 예제 2-21: applicationContext.xml - 싱글턴 범위 빈 -->
+
+<beans ..... >
+  <bean id="controller"
+	class="sample.spring.chapter02.bankapp.controller.FixedDepositControllerImpl">
+    <property name="fixedDepositService" ref="service" />
+  </bean>
+
+  <bean id="service"
+	class="sample.spring.chapter02.bankapp.service.FixedDepositServiceImpl">
+    <property name="fixedDepositDao" ref="dao" />
+  </bean>
+
+  <bean id="dao" class="sample.spring.chapter02.bankapp.dao.FixedDepositDaoImpl" />
+      .....
+</beans>

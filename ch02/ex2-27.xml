@@ -1,0 +1,3 @@
+<!-- 예제 2-27: 싱글턴 범위 빈의 지연 초기화 -->
+
+<bean id="lazyBean" class="example.LazyBean" lazy-init="true"/>
