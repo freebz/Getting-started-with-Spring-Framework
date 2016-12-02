@@ -1,0 +1,12 @@
+<!-- 예제 3-34: 구성 예 - null 키와 null 값을 포함하는 Map -->
+
+<constructor-arg name="mapType">
+  <map>
+    <entry>
+      <key>
+	<null />
+      </key>
+      <null />
+    </entry>
+  </map>
+</constructor-arg>

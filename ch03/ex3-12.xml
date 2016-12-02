@@ -1,0 +1,9 @@
+<!-- 예제 3-12: SampleBean, ABean, BBean 클래스의 빈 정의 -->
+
+<bean id="aBean" class="example.ABean"/>
+<bean id="bBean" class="example.BBean"/>
+
+<bean id="sampleBean" class="example.SampleBean">
+  <constructor-arg ref="bBean"/>
+  <constructor-arg ref="aBean"/>
+</bean>

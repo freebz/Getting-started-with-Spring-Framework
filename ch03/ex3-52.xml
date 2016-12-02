@@ -1,0 +1,15 @@
+<!-- 예제 3-52: applicationContext.xml - util 스키마의 <constant> 요소 -->
+
+<beans ..... xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTypesExample">
+    .....
+    <constructor-arg name="booleanType" ref="booleanTrue" />
+    .....
+  </bean>
+
+  <util:constant id="booleanTrue" static-field="java.lang.Boolean.TRUE" />
+  .....
+</beans>

@@ -1,0 +1,14 @@
+<!-- 예제 3-1: DatabaseOperations 빈에 의존하는 DAO 빈 -->
+
+<bean id="databaseOperations"
+      class="sample.spring.chapter01.bankapp.utils.DatabaseOperations" />
+
+<bean id="personalBankingDao"
+      class="sample.spring.chapter01.bankapp.dao.PersonalBankingDaoImpl">
+  <property name="databaseOperations" ref="databaseOperations" />
+</bean>
+
+<bean id="fixedDepositDao"
+      class="sample.spring.chapter01.bankapp.dao.FixedDepositDaoImpl">
+  <property name="databaseOperations" ref="databaseOperations" />
+</bean>

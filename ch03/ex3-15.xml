@@ -1,0 +1,9 @@
+<!-- 예제 3-15: TransferFundsServiceImpl 클래스의 빈 정의 -->
+
+<bean id="transferFundsService"
+      class="sample.spring.chapter03.bankapp.service.TransferFundsServiceImpl">
+  <constructor-arg value="http://someUrl.com/xyz" />
+  <constructor-arg value="true" />
+  <constructor-arg value="5" />
+  <constructor-arg value="200" />
+</bean>

@@ -1,0 +1,25 @@
+<!-- 예제 3-55: PropertyPathFactoryBean 사용 예 -->
+
+<beans
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="bankDetails" class="sample.spring.chapter03.beans.BankDetails">
+    .....
+    <property name="dateOfInception" ref="dateType" />
+    .....
+  </bean>
+
+  <bean id="dataType"
+	class="org.springframework.beans.factory.config.PropertyPathFactoryBean">
+    <property name="targetBeanName" value="dataTypes"/>
+    <property name="propertyPath" value="dateType"/>
+  </bean>
+  
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTypesExample">
+    .....
+    <property name="dateType" value="30-01-2012" />
+    .....
+  </bean>
+</beans>

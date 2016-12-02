@@ -1,0 +1,16 @@
+<!-- 예제 3-29: 구성 예 - List 형식의 키와 Set 형식의 값을 포함하는 Map -->
+
+<constructor-arg name="nestedListAndSetMap">
+  <map>
+    <entry>
+      <key>
+	<list>
+	  <value>a List element</value>
+	</list>
+      </key>
+      <set>
+	<value>a Set element</value>
+      </set>
+    </entry>
+  </map>
+</constructor-arg>

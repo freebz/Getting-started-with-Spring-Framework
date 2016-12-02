@@ -1,0 +1,9 @@
+<!-- 예제 3-33: 구성 예 - null 요소를 포함하는 Set -->
+
+<constructor-arg name="setWithNullElement">
+  <set>
+    <value>Element 1</value>
+    <value>Element 2</value>
+    <null />
+  </set>
+</constructor-arg>

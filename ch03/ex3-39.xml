@@ -1,0 +1,13 @@
+<!-- 예제 3-39: applicationContext.xml - CustomEditorConfigurer 구성 -->
+
+<bean id="myPropertyEditorRegistrar"
+      class="sample.spring.chapter03.beans.MyPropertyEditorRegistrar" />
+
+<bean id="editorConfigurer"
+      class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+  <property name="propertyEditorRegistrars">
+    <list>
+      <ref bean="myPropertyEditorRegistrar"/>
+    </list>
+  </property>
+</bean>

@@ -1,0 +1,14 @@
+<!-- 예제 3-32: 구성 예 - 키는 빈 이름이고 값은 빈 참조인 Map -->
+
+<constructor-arg name="myExample">
+  <map>
+    <entry>
+      <key>
+	<idref bean="sampleBean" />
+      </key>
+      <ref bean="sampleBean" />
+    </entry>
+  </map>
+</constructor-arg>
+
+<bean id="sampleBean" class="somepackage.SampleBean" />

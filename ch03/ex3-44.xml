@@ -1,0 +1,18 @@
+<!-- 예제 3-44: applicationContext.xml - util 스키마의 <list> 요소 -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTypesExample">
+    .....
+    <constructor-arg name="listType" ref="listType" />
+    .....
+  </bean>
+
+  <util:list id="listType" list-class="java.util.ArrayList">
+    <value>A simple String value in list</value>
+    <value>Another simple String value in list</value>
+  </util:list>
+</beans>

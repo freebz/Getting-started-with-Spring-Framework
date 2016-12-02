@@ -1,0 +1,13 @@
+<!-- 예제 3-42: applicationContext.xml - c 네임스페이스 -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation=".....">
+  .....
+  <bean id="bankStatement" class="sample.spring.chapter03.beans.BankStatement"
+      c:transactionDate = "30-01-2012"	
+      c:amount = "1000"
+      c:transactionType = "Credit"
+      c:referenceNumber = "1110202" />
+      .....
+</beans>

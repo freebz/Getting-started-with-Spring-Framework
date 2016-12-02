@@ -1,0 +1,10 @@
+<!-- 예제 3-28: 구성 예 - List 안에 List가 포함된 경우 -->
+
+<constructor-arg name="nestedList">
+  <list>
+    <list>
+      <value>A simple String vlaue in the nested list</value>
+      <value>Another simple String value in nested list</value>
+    </list>
+  </list>
+</constructor-arg>

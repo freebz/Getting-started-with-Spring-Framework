@@ -1,0 +1,18 @@
+<!-- 예제 3-6: applicationContext.xml - 빈 정의 상속 - 팩토리 메서드 구성 상속 -->
+
+<bean id="controllerFactory"
+      class="sample.spring.chapter03.bankapp.controller.ControllerFactory" />
+
+<bean id="controllerTemplate" factory-bean="controllerFactory"
+      factory-method="getController" abstract="true">
+</bean>
+
+<bean id="fixedDepositController" parent="controllerTemplate">
+  <constructor-arg index="0" value="fixedDepositController" />
+  <property name="fixedDepositService" ref="fixedDepositService" />
+</bean>
+
+<bean id="personalBankingController" parent="controllerTemplate">
+  <constructor-arg index="0" value="personalBankingController" />
+  <property name="personalBankingService" ref="personalBankingService" />
+</bean>

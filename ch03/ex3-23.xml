@@ -1,0 +1,5 @@
+<!-- 예제 3-23: BankDetails 클래스의 빈 정의 -->
+
+<bean id= "bankDetails" class= "BankDetails">
+  <property name= "bankName" value= "My Personal Bank" />
+</bean>

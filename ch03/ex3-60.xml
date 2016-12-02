@@ -1,0 +1,14 @@
+<!-- 예제 3-60: EventSenderFactoryBean 인스턴스를 FixedDepositServiceImpl 빈으로 주입하는 방법 -->
+
+<beans .....>
+
+  <bean id="service" class="sample.spring.chapter03.bankapp.service.FixedDepositServiceImpl">
+    .....
+    <property name="eventSenderFactoryBean" ref="&amp;eventSenderFactory" />
+  </bean>
+  .....
+  <bean id="eventSenderFactory"
+	class="sample.spring.chapter03.bankapp.event.EventSenderFactoryBean">
+    <property name="databasePropertiesFile" value="META-INF/config/database.properties"/>
+  </bean>
+</beans>

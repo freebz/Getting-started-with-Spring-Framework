@@ -1,0 +1,10 @@
+<!-- 예제 3-8: applicationContext.xml - 스프링 빈의 참조를 생성자 인자로 전달 -->
+
+<bean id="serviceTemplate" class="sample.spring.chapter03.bankapp.base.ServiceTemplate">
+  .....
+</bean>
+
+<bean id="userRequestController"
+      class="sample.spring.chapter03.bankapp.controller.UserRequestControllerImpl">
+  <constructor-arg index="0" ref="servicetemplate" />
+</bean>

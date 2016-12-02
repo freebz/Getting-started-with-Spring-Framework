@@ -1,0 +1,15 @@
+<!-- 예제 3-57: applicationContext.xml - EventSenderFactoryBean 구성 -->
+
+<beans .....>
+
+  <bean id="service"
+	class="sample.spring.chapter03.bankapp.service.FixedDepositServiceImpl">
+    .....
+    <property name="eventSender" ref="eventSenderFactory" />
+  </bean>
+  .....
+  <bean id="eventSenderFactory"
+	class="sample.spring.chapter03.bankapp.event.EventSenderFactoryBean">
+    <property name="databasePropertiesFile" value="META-INF/config/database.properties"/>
+  </bean>
+</beans>

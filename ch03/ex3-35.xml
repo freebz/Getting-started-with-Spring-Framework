@@ -1,0 +1,8 @@
+<!-- 예제 3-35: 구성 예 - int[] 형식의 빈 속성 값 설정 -->
+
+<property name="numbersProperty">
+  <array>
+    <value>1</value>
+    <value>2</value>
+  </array>
+</property>

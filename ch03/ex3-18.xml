@@ -1,0 +1,10 @@
+<!-- 예제 3-18: applicationContext.xml - <constructor-arg> 요소의 name 특성 -->
+
+<bean id="transferFundsService"
+      class="sample.spring.chapter03.bankapp.service.TransferFundsServiceImpl">
+  
+  <constructor-arg name="webServiceUrl" value="http://someUrl.com/xyz" />
+  <constructor-arg name="active" value="true" />
+  <constructor-arg name="numberOfRetrialAttempts" value="5" />
+  <constructor-arg name="timeout" value="200" />
+</bean>

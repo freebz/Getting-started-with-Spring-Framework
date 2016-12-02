@@ -1,0 +1,22 @@
+<!-- 예제 3-3: applicationContext.xml - 빈 정의 상속 - 부모 빈 정의가 추상이 아닌 경우 -->
+
+<bean id="serviceTemplate"
+      class="sample.spring.chapter03.bankapp.base.ServiceTemplate">
+  <property name="jmsMessageSender" ref="jmsMessageSender" />
+  <property name="emailMessageSender" ref="emailMessageSender" />
+  <property name="webServiceInvoker" ref="webServiceInvoker" />
+</bean>
+
+<bean id="fixedDepositService" class=".....FixedDepositServiceImpl"
+      parent="serviceTemplate">
+  <property name="fixedDepositDao" ref="fixedDepositDao" />
+</bean>
+
+<bean id="personalBankingService" class=".....PersonalBankingServiceImpl"
+      parent="serviceTemplate">
+  <property name="personalBankingDao" ref="personalBankingDao" />
+</bean>
+
+<bean id="userRequestController" class=".....UserRequestControllerImpl">
+  <property name="serviceTemplate" ref="serviceTemplate" />
+</bean>

@@ -1,0 +1,19 @@
+<!-- 예제 3-45: ListFactoryBean 사용 예 -->
+
+<beans .....>
+
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTypesExample">
+    .....
+    <constructor-arg name="listType" ref="listType" />
+    .....
+  </bean>
+
+  <bean id="listType" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+	<value>A simple String value in list</value>
+	<value>Another simple String value in list</value>
+      </list>
+    </property>
+  </bean>
+</beans>

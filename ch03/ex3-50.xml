@@ -1,0 +1,15 @@
+<!-- 예제 3-50: applicationContext.xml - util 스키마의 <properties> 요소 -->
+
+<beans .....
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="bankDetails" class="sample.spring.chapter03.beans.BankDetails">
+    .....
+    <property name="branchAddresses" ref="branchAddresses" />
+  </bean>
+  .....
+  <util:properties id="branchAddresses"
+      location="classpath:META-INF/addresses.properties" />
+</beans>

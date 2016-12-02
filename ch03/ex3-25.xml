@@ -1,0 +1,16 @@
+<!-- 예제 3-25: applicationContext.xml - BankDetails 클래스의 빈 정의 -->
+
+<bean id="bankDetails" class="sample.spring.chapter03.beans.BankDetails">
+  <property name="bankName" value="My Personal Bank" />
+  <property name="bankPrimaryBusiness" value="Retail banking" />
+  <property name="headOfficeAddress" value="Address of head office" />
+  <property name="privateBank" value="Y" />
+  <property name="primaryCurrency" value="INR" />
+  <property name="dateOfInception" value="30-01-2012"></property>
+  <property name="branchAddress">
+    <value>
+      x = Branch X's address
+      y = Branch Y's address
+    </value>
+  </property>
+</bean>

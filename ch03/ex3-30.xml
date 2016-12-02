@@ -1,0 +1,13 @@
+<!-- 예제 3-30: 구성 예 - 빈 참조를 포함하는 List -->
+
+<bean .....>
+  <constructor-arg name="myList">
+    <list>
+      <ref bean="aBean" />
+      <ref bean="bBean" />
+    </list>
+  </constructor-arg>
+</bean>
+
+<bean id="aBean" class="somepackage.ABean" />
+<bean id="bBean" class="somepackage.BBean" />

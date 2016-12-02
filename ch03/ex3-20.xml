@@ -1,0 +1,14 @@
+<!-- 예제 3-20: applicationContext.xml - 부모 빈과 자식 빈 정의 -->
+
+<bean id="serviceTemplate"
+      class="sample.spring.chapter03.bankapp.base.ServiceTemplate">
+  <constructor-arg name="emailMessageSender" ref="emailMessageSender" />
+  <constructor-arg name="jmsMessageSender" ref="jmsMessageSender" />
+  <constructor-arg name="webServiceInvoker" ref="webServiceInvoker" />
+</bean>
+
+<bean id="fixedDepositService"
+      class="sample.spring.chapter03.bankapp.service.FixedDepositServiceImpl"
+      parent="serviceTEmplate">
+  <property name="fixedDepositDao" ref="fixedDepositDao" />
+</bean>

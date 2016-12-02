@@ -1,0 +1,13 @@
+<!-- 예제 3-43: 인덱스를 사용해 생성자 인자의 값을 지정 -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation=".....">
+  .....
+  <bean id="bankStatement" class="sample.spring.chapter03.beans.BankStatement"
+      c:_0 = "30-01-2012"	
+      c:_1 = "1000"
+      c:_2 = "Credit"
+      c:_3 = "1110202" />
+      .....
+</beans>

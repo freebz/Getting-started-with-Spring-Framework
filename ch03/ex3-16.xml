@@ -1,0 +1,9 @@
+<!-- 예제 3-16: applicationContext.xml - <constructor-arg> 요소의 type 특성 -->
+
+<bean id="transferFundsService"
+      class="sample.spring.chapter03.bankapp.service.TransferFundsServiceImpl">
+  <constructor-arg type="java.lang.String" value="http://someUrl.com/xyz" />
+  <constructor-arg type="boolean" value="true" />
+  <constructor-arg type="int" value="5" />
+  <constructor-arg type="long" value="200" />
+</bean>

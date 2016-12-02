@@ -1,0 +1,14 @@
+<!-- 예제 3-2: applicationContext.xml - MyBank의 애플리케이션 컨텍스트 XML 파일 -->
+
+<bean id="databaseOperations"
+      class="sample.spring.chapter01.bankapp.utils.DatabaseOperations" />
+
+<bean id="daoTemplate" abstract="true">
+  <property name="databaseOperations" ref="databaseOperations" />
+</bean>
+
+<bean id="fixedDepositDao" parent="daoTemplate"
+      class="sample.spring.chapter01.bankapp.dao.FixedDepositDaoImpl" />
+
+<bean id="personalBankingDao" parent="daoTemplate"
+      class="sample.spring.chapter01.bankapp.dao.PersonalBankingDaoImpl" />

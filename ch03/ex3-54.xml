@@ -1,0 +1,21 @@
+<!-- 예제 3-54: applicationContext.xml - util 스키마의 <property-path> 요소 -->
+
+<beans .....
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="bankDetails" class="sample.spring.chapter03.beans.BankDetails">
+    .....
+    <property name="dateOfInception" ref="dateType" />
+    .....
+  </bean>
+
+  <util:property-path id="dateType" path="dataTypes.dateType" />
+
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTyepsExample">
+    .....
+    <property name="dateType" value="30-01-2012" />
+    .....
+  </bean>
+</beans>

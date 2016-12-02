@@ -1,0 +1,17 @@
+<!-- 예제 3-37: applicationContext.xml - CollectionTypesExample 클래스의 빈 정의 -->
+
+<bean class="sample.spring.chapter03.beans.CollectionTypesExample">
+  <property name="listType">
+    <set>
+      <value>set element 1</value>
+      <value>set element 2</value>
+    </set>
+  </property>
+  <property name="setType">
+    <list>
+      <value>list element 1</value>
+      <value>list element 2</value>
+    </list>
+  </property>
+  .....
+</bean>

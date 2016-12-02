@@ -1,0 +1,17 @@
+<!-- 예제 3-31: 구성 예 - 키와 값이 빈 참조인 Map -->
+
+<bean .....>
+  <constructor-arg name="myMapWithBeanRef">
+    <map>
+      <entry>
+	<key>
+	  <ref bean="aBean" />
+	</key>
+	<ref bean="bBean" />
+      </entry>
+    </map>
+  </constructor-arg>
+</bean>
+
+<bean id="aBean" class="somepackage.ABean" />
+<bean id="bBean" class="somepackage.BBean" />

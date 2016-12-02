@@ -1,0 +1,18 @@
+<!-- 예제 3-48: applicationContext.xml - util 스키마의 <set> 요소 -->
+
+<beans .....
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="dataTypes" class="sample.spring.chapter03.beans.DataTypesExample">
+    .....
+    <constructor-arg name="setType" ref="setType" />
+    .....
+  </bean>
+  <util:set id="setType" set-class="java.util.HashSet">
+    <value>Element 1</value>
+    <value>Element 2</value>
+  </util:set>
+  .....
+</beans>

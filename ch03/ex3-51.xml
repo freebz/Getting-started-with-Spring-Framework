@@ -1,0 +1,15 @@
+<!-- 예제 3-51: PropertiesFactoryBean 사용 예 -->
+
+<beans .....>
+
+  <bean id="bankDetails" class="sample.spring.chapter03.beans.BankDetails">
+    .....
+    <property name="branchAddresses" ref="branchAddresses" />
+  </bean>
+
+  <bean id="branchAddresses"
+	class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="location" value="classpath:META-INF/addresses.properties"/>
+  </bean>
+  .....
+</beans>

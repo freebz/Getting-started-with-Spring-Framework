@@ -1,0 +1,11 @@
+<!-- 예제 3-10: applicationContext.xml - ServiceTemplate 클래스와 그 의존성의 빈 정의 -->
+
+<bean id="serviceTemplate" class="sample.spring.chapter03.bankapp.base.ServiceTemplate">
+  <constructor-arg ref="emailMessageSender" />
+  <constructor-arg ref="jmsMessageSender" />
+  <constructor-arg ref="webServiceInvoker" />
+</bean>
+
+<bean id="jmsMessageSender" class="sample.spring.chapter03.bankapp.base.JmsMessageSender" />
+<bean id="emailMessageSender" class="sample.spring.chapter03.bankapp.base.EmailMessageSender" />
+<bean id="webServiceInvoker" class="sample.spring.chapter03.bankapp.base.WebServiceInvoker" />
