@@ -1,0 +1,12 @@
+<!-- 예제 4-27: applicationContext.xml - constructor 자동 연결 -->
+
+<bean id="customerRequestService"
+      class="sample.spring.chapter04.bankapp.service.CustomerRequestServiceImpl"
+      autowire="constructor">
+</bean>
+
+<bean id="customerRequestDetails"
+      class="scope.spring.chapter04.bankapp.domain.CustomerRequestDetails" scope="prototype" />
+
+<bean id="customerRequestDao"
+      class="sample.spring.chapter04.bankapp.dao.CustomerRequestDaoImpl" />

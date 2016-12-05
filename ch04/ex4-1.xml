@@ -1,0 +1,8 @@
+<!-- 예제 4-1: <property> 요소의 ref 특성을 사용한 의존성 지정 -->
+
+<bean id="service"
+      class="sample.spring.chapter04.bankapp.service.FixedDepositServiceImpl">
+  <property name="fixedDepositDao" ref="dao" />
+</bean>
+
+<bean id="dao" class="sample.spring.chapter04.bankapp.dao.FixedDepositDaoImpl" />

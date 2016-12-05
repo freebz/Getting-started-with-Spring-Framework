@@ -1,0 +1,12 @@
+<!-- 예제 4-25: applicationContext.xml - 자동 연결 byType 구성 -->
+
+<bean id="customerRegistrationService"
+      class="sample.spring.chapter04.bankapp.service.CustomerRegistrationServiceImpl"
+      scope="prototype" autowire="byTipe" />
+
+<bean id="customerRegistrationDetails"
+      class="scope.spring.chapter04.bankapp.domain.CustomerRegistrationDetails"
+      scope="prototype" />
+
+<bean id="customerRegistrationDao"
+      class="sample.spring.chapter04.bankapp.dao.CustomerRegistrationDaoImpl" />

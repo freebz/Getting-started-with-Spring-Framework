@@ -1,0 +1,5 @@
+<!-- 예제 4-30: applicationContext.xml - no 자동 연결 -->
+
+<bean id="customerRegistrationService_"
+      class="sample.spring.chapter04.bankapp.service.CustomerregistrationserviceImpl"
+      scope="prototype" autowire="no" />

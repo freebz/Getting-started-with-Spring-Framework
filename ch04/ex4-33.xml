@@ -1,0 +1,15 @@
+<!-- 예제 4-33: default-autowire-candidates 특성의 사용 예 -->
+
+<beans default-autowire-candidates="*Dao">
+  .....
+  <bean id="customerRequestDetails"
+	class="sample.spring.chapter04.bankapp.domain.CustomerRequestDetails"
+	scope="prototype" autowire-candidate="true"/>
+
+  <bean id="customerRequestDao"
+	class="sample.spring.chapter04.bankapp.dao.CustomerRequestDaoImpl" />
+
+  <bean id="customerRegistrationDao"
+	class="sample.spring.chapter04.bankapp.dao.CustomerRegistrationDaoImpl" />
+  .....
+</beans>

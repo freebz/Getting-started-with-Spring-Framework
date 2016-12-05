@@ -1,0 +1,9 @@
+<!-- 예제 4-32: applicationContext.xml - autowire-candidate 특성 -->
+
+<bean id="accountStatementService"
+      class="sample.spring.chapter04.bankapp.service.AccountStatementServiceImpl"
+      autowire="byType" />
+
+<bean id="accountStatementDao"
+      class="sample.spring.chapter04.bankapp.dao.AccountStatementDaoImpl"
+      autowire-candidate=false" />

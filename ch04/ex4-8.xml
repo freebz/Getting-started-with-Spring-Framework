@@ -1,0 +1,8 @@
+<!-- 예제 4-8: depends-on 특성으로 여러 암시적 의존성 지정 -->
+
+<beans .....>
+  <bean id="abean" ..... depends-on="bBean, cBean">
+    .....
+  </bean>
+  .....
+</beans>

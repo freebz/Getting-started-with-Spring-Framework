@@ -1,0 +1,15 @@
+<!-- 예제 4-12: applicationContext.xml - customerRegistrationService 빈과 그 의존성 -->
+
+<bean id="customerRegistrationService"
+      class="sample.spring.chapter04.bankapp.service.CustomerRegistrationServiceImpl"
+      scope="prototype">
+  <constructor-arg name="customerRegistrationDetails" ref="customerRegistrationDetails" />
+  <constructor-arg name="customerRegistrationDao" ref="customerRegistrationDao" />
+</bean>
+
+<bean id="customerRegistrationDetails"
+      class="sample.spring.chapter04.bankapp.domain.CustomerRegistrationDetails"
+      scope="prototype" />
+
+<bean id="customerRegistrationDao"
+      class="sample.spring.chapter04.bankapp.dao.CustomerRegistrationDaoImpl" />

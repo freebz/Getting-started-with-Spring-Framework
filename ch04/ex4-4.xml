@@ -1,0 +1,14 @@
+<!-- 예제 4-4: applicationContext.xml - 암시적 의존성의 예 -->
+
+<beans .....>
+  <bean id="service"
+	class="sample.spring.chapter04.bankapp.service.FixedDepositServiceImpl">
+    .....
+    <constructor-arg index="0" value="META-INF/config/appConfig.properties" />
+  </bean>
+
+  <bean id="eventSenderSelectorService"
+	class="sample.spring.chapter04.bankapp.spring.EventSenderSelectorServiceImpl">
+    <constructor-arg index="0" value="META-INF/config/appConfig.properties" />
+  </bean>
+</beans>

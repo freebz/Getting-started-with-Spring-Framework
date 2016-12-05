@@ -1,0 +1,14 @@
+<!-- 예제 4-10: applicationContext.xml - customerRequestService 빈의 의존성 -->
+
+<bean id="customerRequestService"
+      class="sample.spring.chapter04.bankapp.service.CustomerRequestServiceImpl">
+  <constructor-arg name="customerRequestDetails" ref="customerRequestDetails" />
+  <constructor-arg name="customerRequestDao" ref="customerRequestDao" />
+</bean>
+
+<bean id="customerRequestDetails"
+      class="sample.spring.chapter04.bankapp.domain.CustomerRequestDetails"
+      scope="prototype" />
+
+<bean id="customerRequestDao"
+      class="sample.spring.chapter04.bankapp.dao.CustomerRequestDaoImpl" />

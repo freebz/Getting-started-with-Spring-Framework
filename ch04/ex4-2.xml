@@ -1,0 +1,8 @@
+<!-- 예제 4-2: applicationContext.xml - 내부 빈의 예 -->
+
+<bean id="service"
+      class="sample.spring.chapter04.bankapp.service.FixedDepositServiceImpl">
+  <property name="fixedDepositDao">
+    <bean class="sample.spring.chapter04.bankapp.dao.FixedDepositDaoImpl" />    
+  </property>
+</bean>

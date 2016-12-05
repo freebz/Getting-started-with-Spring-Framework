@@ -1,0 +1,15 @@
+<!-- 예제 4-7: <bean> 요소의 depends-on 특성 사용 -->
+
+<beans .....>
+  <bean id="service"
+	class="sample.spring.chapter04.bankapp.service.FixedDepositServiceImpl"
+	depends-on="eventSenderSelectorService">
+    .....
+    <constructor-arg index="0" value="META-INF/config/appConfig.properties" />
+  </bean>
+
+  <bean id="eventSenderSelectorService"
+	class="sample.spring.chapter04.bankapp.spring.EventSenderSelectorServiceImpl">
+    <constructor-arg index="0" value="META-INF/config/appConfig.properties" />
+  </bean>
+</beans>

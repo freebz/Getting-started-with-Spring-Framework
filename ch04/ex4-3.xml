@@ -1,0 +1,18 @@
+<!-- 예제 4-3: 내부 빈을 정의하는 util 스키마의 <list> 요소 -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="..... http://www.springframework.org/schema/util
+			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+  <bean id="someBean" class="com.sample.SomeBean">
+    .....
+    <constructor-arg name="listType">
+      <util:list list-class="java.util.ArrayList">
+	<value>A simple String value in list</value>
+	<value>Another simple String value in list</value>
+      </util:list>
+    </constructor-arg>
+    .....
+  </bean>
+</beans>

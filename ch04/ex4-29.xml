@@ -1,0 +1,8 @@
+<!-- 예제 4-29: applicationContext.xml - byName 자동 연결 -->
+
+<bean id="fixedDepositService"
+      class="sample.spring.chapter04.bankapp.service.FixedDepositServiceImpl"
+      autowire="byName" />
+
+<bean id="myFixedDepositDao"
+      class="scope.spring.chapter04.bankapp.domain.FixedDepositImpl" />
