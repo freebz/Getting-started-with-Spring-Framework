@@ -1,0 +1,12 @@
+<!-- 예제 6-22: appicationContext.xml - 빈 정의에서 SpEL 식 사용 -->
+
+<beans ..... >
+  <bean id="sample" class="sample.spring.chapter06.beans.Sample">
+    <property name="environment" value="#{configuration.environment}" />
+    <property name="currency" value="Some currency" />
+    <property name="country" value="#{configuration.getCountry()}" />
+    <property name="state" value="#{configuration.state}" />
+  </bean>
+
+  <bean id="configuration" class="sample.spring.chapter06.beans.Configuration" />
+</beans>

@@ -1,0 +1,8 @@
+<!-- 예제 6-4: <include-filter> 및 <exclude-filter> 요소 -->
+
+<beans .....>
+  <context:component-scan base-package="sample.example">
+    <context:include-filter type="annotation" expression="example.annotation.MyAnnotation"/>
+    <context:exclude-filter type="regex" expression=".*Details"/>
+  </context:component-scan>
+</beans>

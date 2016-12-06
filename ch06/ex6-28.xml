@@ -1,0 +1,4 @@
+<!-- 예제 6-28: appicationContext.xml - 스프링의 LocalValidatorFactoryBean 구성 -->
+
+<bean id="validator"
+      class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />

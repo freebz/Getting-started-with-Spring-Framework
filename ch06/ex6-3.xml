@@ -1,0 +1,4 @@
+<!-- 예제 6-3: FixedDepositServiceImpl 클래스의 빈 정의 -->
+
+<bean id="fixedDepositService"
+      class="sample.spring.chapter06.bankapp.service.FixedDepositServiceImpl" />
