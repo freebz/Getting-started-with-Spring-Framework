@@ -1,0 +1,8 @@
+<!-- 예제 5-17: applicationContext.xml -->
+
+<bean class=".....postprocessor.DependencyResolutionBeanPostProcessor">
+  <property name="myApplicationContext" ref="myApplicationContext" />
+  <property name="order" value="0" />
+</bean>
+
+<bean id="myApplicationContext" class=".....bankapp.common.MyApplicationContext" />

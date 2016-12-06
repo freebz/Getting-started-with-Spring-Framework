@@ -1,0 +1,20 @@
+<!-- 예제 5-30: applicationContext.xml - ProeprtySourcesPlaceholderConfigurer 빈 정의 -->
+
+<bean
+    class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+  <property name="locations">
+    <list>
+      <value>classpath:database.properties</value>
+      <value>classpath:webservice.properties</value>
+    </list>
+  </property>
+  <property name="properties">
+    <props>
+      <prop key="database.password">locally-set-password</prop>
+      <prop key="database.driverClass">locally-set-driverClass</prop>
+      <prop key="webservice.url">locally-set-webServiceUrl</prop>
+    </props>
+  </property>
+  <property name="ignoreUnresolvablePlaceholders" value="false" />
+  <property name="lacalOverride" value="true" />
+</bean>

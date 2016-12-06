@@ -1,0 +1,13 @@
+<!-- 예제 5-32: applicationContext.xml - DataSource 및 WebServiceConfiguration의 빈 정의 -->
+
+<bean id="datasource" class="sample.spring.chapter05.domain.DataSource">
+  <property name="url" value="test url value" />
+  <property name="username" value="test username value" />
+  <property name="password" value="test password value" />
+  <property name="driverClass" value="test driverClass value" />
+</bean>
+
+<bean id="webServiceConfiguration"
+      class="sample.spring.chapter05.domain.WebServiceConfiguration">
+  <property name="webServiceUrl" value="this webservice url needs to be replaced" />
+</bean>

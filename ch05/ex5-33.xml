@@ -1,0 +1,11 @@
+<!-- 예제 5-33: applicationContext.xml - PropertyOverrideConfigurer 구성 -->
+
+<bean
+    class="org.springframework.beans.factory.config.PropertyOverrideConfigurer">
+  <property name="locations">
+    <list>
+      <value>classpath:database.properties</value>
+      <value>classpath:webservice.properties</value>
+    </list>
+  </property>  
+</bean>

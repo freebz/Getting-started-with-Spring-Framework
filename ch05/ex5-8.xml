@@ -1,0 +1,14 @@
+<!-- 예제 5-8: applicationContext.xml - CommonAnnotationBeanPostProcessor 구성 -->
+
+<beans .....>
+  <bean id="fixedDepositService"
+	class="sample.spring.chapter05.bankapp.service.FixedDepositServiceImpl">
+    <property name="myFixedDepositDao" ref="myFixedDepositDao" />
+  </bean>
+  
+  <bean id="myFixedDepositDao"
+	class="sample.spring.chapter05.bankapp.dao.FixedDepositDaoImpl" />
+
+  <bean
+      class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+</beans>

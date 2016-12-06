@@ -1,0 +1,5 @@
+<!-- 예제 5-12: InstanceValidationBeanPostProcessor 빈 정의 -->
+
+<bean class="...bankapp.postprocessor.InstanceValidationBeanPostProcessor">
+  <property name="order" value="1" />
+</bean>

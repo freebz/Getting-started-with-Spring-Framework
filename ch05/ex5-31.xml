@@ -1,0 +1,16 @@
+<!-- 예제 5-31: applicationContext.xml - <property-placeholder> 요소 -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util" .....>
+  ...
+  <context:property-placeholder ignore-unresolvable="false"
+      location="classpath:database.properties, classpath:webservice.properties"				
+      local-override="true" order="1" properties-ref="localProps" />
+
+  <util:properties id="localProps">
+    <prop key="database.password">locally-set-password</prop>
+    <prop key="database.driverClass">locally-set-driverClass</prop>
+    <prop key="webservice.url">locally-set-webServiceUrl</prop>
+  </utol:properties>
+</beans>

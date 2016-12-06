@@ -1,0 +1,12 @@
+<!-- 예제 5-3: applicationContext.xml - init-method 및 destroy-method 특성 사용 -->
+
+<beans .....>
+  <bean id="fixedDepositService"
+	class="sample.spring.chapter05.bankapp.service.FixedDepositServiceImpl">
+    <property name="myFixedDepositDao" ref="myFixedDepositDao" />
+  </bean>
+
+  <bean id="myFixedDepositDao"
+	class="sample.spring.chapter05.bankapp.dao.FixedDepositDaoImpl"
+	init-method="initializeDbConnection" destroy-method="releaseDbConnection" />
+</beans>

@@ -1,0 +1,12 @@
+<!-- 예제 5-26: applicationContext.xml - ProeprtySourcesPlaceholderConfigurer 빈 정의 -->
+
+<bean
+    class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+  <property name="locations">
+    <list>
+      <value>classpath:database.properties</value>
+      <value>classpath:webservice.properties</value>
+    </list>
+  </property>
+  <property name="ignoreUnresolvablePlaceholders" value="false" />
+</bean>

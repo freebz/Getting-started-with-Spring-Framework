@@ -1,0 +1,6 @@
+<!-- 예제 5-6: default-init-method 및 default-destroy-method 특성 -->
+
+<beans ..... default-init-method="initialize" default-destroy-method="release">
+  <bean id="A" class="....." init-method="initializeService" />
+  <bean id="B" class="....." />
+</beans>
