@@ -1,0 +1,10 @@
+<!-- 예제 7-5: applicationContext.xml - NamedParameterJdbcTemplate 구성 -->
+
+<bean id="namedJdbcTemplate"
+      class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+  <constructor-arg index="0" ref="dataSource" />
+</bean>
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource".....>
+  .....
+</bean>

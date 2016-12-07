@@ -1,0 +1,14 @@
+<!-- 예제 7-15: applicationContext.xml - <annotation-driven> 요소 -->
+
+<beans ..... xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation=".....http://www.springframework.org/schema/tx
+			http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+  .....
+  <tx:annotation-driven transaction-manager="txManager" />
+
+  <bean id="txManager"
+	class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="dataSource" />
+  </bean>
+  .....
+</beans>

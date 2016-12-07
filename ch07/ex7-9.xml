@@ -1,0 +1,7 @@
+<!-- 예제 7-9: applicationContext.xml - LocalSessionFactoryBean 구성 -->
+
+<bean id="sessionFactory"
+      class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+  <property name="dataSource" ref="dataSource" />
+  <property name="packagesToScan" value="sample.spring" />
+</bean>

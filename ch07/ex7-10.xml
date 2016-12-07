@@ -1,0 +1,12 @@
+<!-- 예제 7-10: LocalSessionFactoryBean의 annotatedClasses 속성 -->
+
+<bean id="sessionFactory"
+      class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+  <property name="dataSource" ref="dataSource" />
+  <property name="annotatedClasses">
+    <list>
+      <value>sample.spring.chapter07.bankapp.domain.BankAccountDetails</value>
+      <value>sample.spring.chapter07.bankapp.domain.FixedDepositDetails</value>
+    </list>
+  </property>
+</bean>
