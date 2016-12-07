@@ -1,0 +1,14 @@
+<!-- 예제 8-1: applicationContext.xml - 임베디드 ActiveMQ 브로커 구성 -->
+
+<beans .....
+    xmlns:amq="http://activemq.apache.org/schema/core"
+    xsi:schemaLocation=".....http://activemq.apache.org/schema/core
+			http://activemq.apache.org/schema/core/activemq-core-5.7.0.xsd.....">
+
+  <amq:broker>
+    <amq:transportConnectors>
+      <amq:transportConnector uri="tcp://localhost:61616" />
+    </amq:transportConnector>
+  </amq:broker>
+  .....
+</beans>

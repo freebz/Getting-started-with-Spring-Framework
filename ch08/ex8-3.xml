@@ -1,0 +1,16 @@
+<!-- 예제 8-3: applicationContext.xml - JMSTemplate 구성 -->
+
+<beans .....
+    xmlns:amq="http://activemq.apache.org/schema/core"
+    xsi:schemaLocation=".....http://activemq.apache.org/schema/core
+			http://activemq.apache.org/schema/core/activemq-core-5.7.0.xsd.....">
+  .....
+  <bean class="org.springframework.jms.core.JmsTemplate" id="jmsTemplate">
+    <property name="connectionFactory" ref="cachingConnectionFactory" />
+    <property name="defaultDestination" ref="fixedDepositDestination" />
+  </bean>
+
+  <amq:queue id="fixedDepositDestination" physicalName="aQueueDestination" />
+  <amq:queue id="emailQueueDestination" physicalName="emailQueueDestination" />
+  .....
+</beans>

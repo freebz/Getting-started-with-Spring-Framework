@@ -1,0 +1,17 @@
+<!-- 예제 8-27: SimpleCacheManager 구성 -->
+
+<bean id="myCacheManager"
+      class="org.springframework.cache.support.SimpleCacheManager">
+  <property name="caches">
+    <set>
+      <bean
+	  class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean">
+	<property name="name" value="FixedDepositList" />
+      </bean>
+      <bean
+	  class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean">
+	<property name="name" value="FixedDeposit" />
+      </bean>
+    </set>
+  </property>
+</bean>

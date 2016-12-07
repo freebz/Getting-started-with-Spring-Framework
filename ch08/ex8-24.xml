@@ -1,0 +1,9 @@
+<!-- 예제 8-24: @Async 및 @Scheduled 어노테이션 활성화 -->
+
+<task:annotation-driven executor="anExecutor" scheduler="aScheduler"/>
+
+<task:executor id="anExecutor" />
+
+<task:scheduled-tasks scheduler="aScheduler">
+  <task:schduled ref="sampleJob" method="doSomething" fixed-rate="5000" />
+</task:schduled-tasks>

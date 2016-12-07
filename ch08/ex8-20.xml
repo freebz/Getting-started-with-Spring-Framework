@@ -1,0 +1,15 @@
+<!-- 예제 8-20: 스프링 task 스키마를 사용한 ThreadPoolTaskExecutor 구성 -->
+<!--
+    ABORT - 항상 RejectedExecutionException 발생
+    CALLER_RUNS - 거절된 작업을 호출자의 스레드에서 실행
+    DISCARD_OLDEST - 가장 오래된 작업을 삭제하고 거절된 작업을 실행
+    discard - 거절된 작업을 삭제
+-->
+
+<beans ..... xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation=".....http://www.springframework.org/schema/task
+			http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+  <task:executor id="myTaskExecutor" pool-size="5-10"
+		 queue-capacity="15" rejection-policy="ABORT" />
+</beans>

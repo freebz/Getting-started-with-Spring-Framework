@@ -1,0 +1,21 @@
+<!-- 예제 8-10: applicationContext.xml - 메시지 수신자 컨테이너 구성 -->
+
+<beans ..... xmlns:jms="http://www.springframework.org/schema/jms"
+    xsi:schemaLocation=".....
+    http://www.springframework.org/schema/jms
+    http://www.springframework.org/schema/jms/spring-jms-4.0.xsd">
+  .....
+  <jms:listener-container connection-factory="cachingConnectionFactory"
+    destination-type="queue" transaction-manager="jmsTxManager">
+
+    <jms:listener destination="aQueueDestination" ref="fixedDepositMessageLinstner" />
+    <jms:listener destination="emailQueueDestination" ref="emailMessageListener" />
+  </jms:listener-container>
+
+  <bean class="sample.spring.chapter08.bankapp.jms.EmailMessageListener"
+	id="emailMessageListener" />
+  
+  <bean class="sample.spring.chapter08.bankapp.jms.FixedDepositMessageListener"
+	id="fixedDepositMessageListener" />
+        .....
+</bean>

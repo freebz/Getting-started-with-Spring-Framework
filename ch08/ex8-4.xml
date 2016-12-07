@@ -1,0 +1,5 @@
+<!-- 예제 8-4: applicationContext.xml - JmsTransactionManager 구성 -->
+
+<bean id="jmsTxManager" class="org.springframework.jms.connection.JmsTransactionManager">
+  <property name="connectionFactory" ref="cachingConnectionFactory" />
+</bean>

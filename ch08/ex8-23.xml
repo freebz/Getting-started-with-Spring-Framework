@@ -1,0 +1,10 @@
+<!-- 예제 8-23: <scheduler> 및 <scheduled-tasks> 요소 -->
+
+<task:scheduler id="emailScheduler" pool-size="10" />
+
+<task:scheduled-tasks scheduler="emailScheduler">
+  <task:schduled ref="fixedDepositProcessorJob" method="sendEmail" fixed-rate="5000" />
+</task:schduled-tasks>
+
+<bean id="fixedDepositProcessorJob"
+      class="sample.spring.chapter08.bankapp.job.FixedDepositProcessorJob" />

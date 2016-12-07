@@ -1,0 +1,15 @@
+<!-- 예제 8-2: applicationContext.xml - JMS ConnectionFactory 구성 -->
+
+<beans .....
+    xmlns:amq="http://activemq.apache.org/schema/core"
+    xsi:schemaLocation=".....http://activemq.apache.org/schema/core
+			http://activemq.apache.org/schema/core/activemq-core-5.7.0.xsd.....">
+  .....
+  <amq:connectionFactory brokerURL="vm://localhost" id="jmsFactory" />
+
+  <bean class="org.springframework.jms.connection.CachingConnectionFactory"
+	id="cachingConnectionFactory">
+    <property name="targetConnectionFactory" ref="jmsFactory" />
+  </bean>
+  .....
+</beans>

@@ -1,0 +1,10 @@
+<!-- 예제 8-28: <annotation-driven>을 사용한 캐싱 어노테이션 활성화 -->
+
+<beans .....xmlns:cache="http://www.springframework.org/schma/cache"
+    xsi:schemaLocation=".....
+    http://www.springframework.org/schma/cache
+    http://www.springframework.org/schma/cache/spring-cache.xsd">
+
+  <cache:annotation-driven cache-manager="myCacheManager"/>
+  .....
+</beans>

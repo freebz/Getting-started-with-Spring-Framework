@@ -1,0 +1,10 @@
+<!-- 예제 8-6: TransactionTemplate 구성 -->
+
+<bean id="jmsTxManager" class="org.springframework.jms.connection.JmsTransactionManager">
+  <property name="connectionFactory" ref="cachingConnectionFactory" />
+</bean>
+
+<bean id="transactionTemplate"
+      class="org.springframework.transaction.support.TransactionTemplate">
+  <property name="transactionManager" ref="jmsTxManager" />
+</bean>

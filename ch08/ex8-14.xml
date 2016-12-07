@@ -1,0 +1,11 @@
+<!-- 예제 8-14: applicationContext.xml - SimpleMailMessage 구성 -->
+
+<bean class="org.springframework.mail.SimpleMailMessage" id="requestRecievedTemplate">
+  <property name="subject" value="${email.subject.request.received}" />
+  <property name="text" value="${email.text.request.recived}" />
+</bean>
+
+<bean class="org.springframework.mail.SimpleMailMessage" id="requestProcessedTemplate">
+  <property name="subject" value="${email.subject.request.processed}" />
+  <property name="text" value="${email.text.request.processed}" />
+</bean>
