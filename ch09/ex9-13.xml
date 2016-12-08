@@ -1,0 +1,13 @@
+<!-- 예제 9-13: applicationContext.xml - 스프링 aop 스키마 사용 -->
+
+<beans ..... xmlns:aop="http://www.springframework.org/schma/aop" ..... >
+  .....
+  <bean id="sampleAspect"
+	class="sample.spring.chapter09.bankapp.aspects.SampleAspect" />
+
+  <aop:config proxy-target-class="false" expose-proxy="true">
+    <aop:aspect id="sampleAspect" ref="sampleAspect">
+      .....
+    </aop:aspect>
+  </aop:config>
+</beans>

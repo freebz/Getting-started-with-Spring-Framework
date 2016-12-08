@@ -1,0 +1,16 @@
+<!-- 예제 9-14: 애플리케이션 컨텍스트 XML - <pointcut> 요소 -->
+
+<beans ..... xmlns:aop="http://www.springframework.org/schma/aop" ..... >
+  .....
+  <bean id="sampleAspect"
+	class="sample.spring.chapter09.bankapp.aspects.SampleAspect" />
+
+  <aop:config proxy-target-class="false" expose-proxy="true">
+    <aop:pointcut expression="execution(* sample.spring..*Service.*(..))" id="services" />
+    
+    <aop:aspect id="sampleAspect" ref="sampleAspect">
+      <aop:after method="afterAdvice" pointcut-ref="services" />
+      <aop:around method="aroundAdvice" pointcut-ref="services"/>
+    </aop:aspect>
+  </aop:config>
+</beans>

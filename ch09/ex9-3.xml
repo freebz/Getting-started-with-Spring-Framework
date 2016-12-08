@@ -1,0 +1,12 @@
+<!-- 예제 9-3: applicationContext.xml - <aspectj-autoproxy> 요소 -->
+
+<beans .....
+    xmlns:context="http://www.springframework.org/schma/context"
+    xmlns:aop="http://www.springframework.org/schma/aop"
+    xsi:schemaLocation=".....http://www.springframework.org/schma/aop
+        http://www.springframework.org/schma/aop/spring-aop-4.0.xsd">
+
+  <context:component-scan base-package="sample.spring" />
+  <aop: aspectj-autoproxy proxy-target-class="false" expose-proxy="true"/>
+  
+</beans>
