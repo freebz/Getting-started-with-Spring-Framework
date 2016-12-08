@@ -1,0 +1,7 @@
+<!-- 예제 10-25: bankapp-config.xml - ViewResolver 구성 -->
+
+<bean id="viewResolver"
+      class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="prefix" value="/WEB-INF/jsp/" />
+  <property name="suffix" value=".jsp" />
+</bean>

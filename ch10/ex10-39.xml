@@ -1,0 +1,10 @@
+<!-- 예제 10-39: ContextLoaderListener 구성 -->
+
+<context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>classpath*:/META-INF/spring/applicationContext.xml</param-value>
+</context-param>
+
+<listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>

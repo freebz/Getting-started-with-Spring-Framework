@@ -1,0 +1,16 @@
+<!-- 예제 10-7: myapp-config.xml -->
+
+<beans .....
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation=".....http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd.....">
+
+  <mvc:annotation-driven />
+  <context:component-scan base-package="sample.spring.chapter10.web" />
+  
+  <bean id="viewResolver"
+	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/jsp/" />
+    <property name="suffix" value=".jsp" />
+  </bean>
+</beans>

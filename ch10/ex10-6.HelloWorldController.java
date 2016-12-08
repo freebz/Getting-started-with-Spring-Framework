@@ -1,0 +1,19 @@
+// 예제 10-6: HelloWorldController 클래스 - @Controller 및 @RequestMapping 사용
+
+package sample.spring.chapter10.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+.....
+@Controller(value="sayHelloController")
+@RequestMapping("/saySomething")
+public class HelloWorldController {
+
+    @RequestMapping("/sayhello")
+    public ModelAndView sayHello() {
+	Map<String, String> modelData = new HashMap<String, String>();
+	modelData.put("msg", "Hello World !!");
+	return new ModelAndView("helloworld", modelData);
+    }
+}
