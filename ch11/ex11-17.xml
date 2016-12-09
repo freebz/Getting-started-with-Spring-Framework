@@ -1,0 +1,18 @@
+<!-- 예제 11-17: WebBindingInitializer 구성 -->
+
+<bean id="handlerAdapter"
+      class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+  <proeprty name="webBindingInitializer" ref="myInitializer" />
+</bean>
+
+<bean id="handlerMapping"
+      class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+
+<bean id="myInitializer"
+      class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+  <property name="propertyEditorRegistrars">
+    <list>
+      <bean class="mypackage.MyPropertyEditorRegistrar" />
+    </list>
+  </property>
+</bean>

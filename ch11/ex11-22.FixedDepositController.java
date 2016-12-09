@@ -1,0 +1,13 @@
+// 예제 11-22: 모델 특성과 BindingResult 객체의 순서를 잘못 지정한 예
+
+.....
+public class FixedDepositController {
+    .....
+    @RequestMapping(params = "fdAction=create", method = RequestMethod.POST)
+    public String openFixedDeposit(
+        @ModelAttribute(value = "newFixedDepositDetails") FixedDepositDetails fixedDepositDetails,
+	    SessionStatus sessionStatus, BindingResult bindingResult) {
+	.....
+    }
+    .....
+}
