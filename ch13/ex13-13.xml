@@ -1,0 +1,7 @@
+<!-- 예제 13-13: 비동기 요청의 기본 시간 제한 값 설정 -->
+
+<mvc:annotation-driven>
+  <mvc:async-support default-timeout="10000" >
+    .....
+  </mvc:async-support>
+</mvc:annotation-driven>

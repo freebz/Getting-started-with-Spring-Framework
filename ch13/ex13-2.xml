@@ -1,0 +1,10 @@
+<!-- 예제 13-2: MyRequestHandlerInterceptor -->
+
+<beans .....xmlns:mvc="http://www.springframework.org/schema/mvc".....>
+
+  <mvc:annotation-driven />
+  <mvc:interceptors>
+    .....
+    <bean class="sample.spring.chapter13.web.MyRequesthandlerInterceptor" />
+  </mvc:interceptors>
+</beans>

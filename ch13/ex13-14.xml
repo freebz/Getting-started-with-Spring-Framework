@@ -1,0 +1,9 @@
+<!-- 예제 13-14: DeferredResultProcessingInterceptor 구현의 구성 -->
+
+<mvc:annotation-driven>
+  <mvc:async-support default-timeout="30000">
+    <mvc:deferred-result-interceptors>
+      <bean class="sample.spring.chapter13.web.MyDeferredResultInterceptor"/>
+    </mvc:deferred-result-interceptors>
+  </mvc:async-support>
+</mvc:annotation-driven>

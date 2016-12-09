@@ -1,0 +1,15 @@
+<!-- 예제 13-23: AmountFormatAnnotationFormatterFactory 구성 -->
+
+<beans .....>
+  .....
+  <mvc:annotation-driven conversion-service="myConversionService" />
+      .....
+  <bean id="myConversionService"
+	class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+    <property name="formatters">
+      <set>
+	<bean class="sample.spring.chapter13.formatter.AmountFormatAnnotationFormatterFactory" />
+      </set>
+    </property>
+  </bean>
+</beans>

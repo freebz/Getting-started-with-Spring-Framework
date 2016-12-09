@@ -1,0 +1,12 @@
+<!-- 예제 13-3: <mvc:interceptor> 사용 -->
+
+<beans .....xmlns:mvc="http://www.springframework.org/schema/mvc".....>
+
+  <mvc:annotation-driven />
+  <mvc:interceptors>
+    <mvc:interceptor>
+      <mvc:mapping path="/audit/**"/>
+      <bean class="sample.spring.chapter13.web.MyRequesthandlerInterceptor" />
+    </mvc:interceptor>
+  </mvc:interceptors>
+</beans>

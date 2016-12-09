@@ -1,0 +1,21 @@
+<!-- 예제 13-4: bankapp-config.xml -->
+
+<beans .....>
+  <bean class="org.springframework.web.servlet.i18n.CookieLocaleResolver" id="localeResolver">
+    <property name="cookieName" value="mylocale" />
+  </bean>
+
+  <bean
+      class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+      id="messageSource">
+    <property name="basenames" value="WEB-INF/i18n/messages" />
+  </bean>
+
+  <mvc:interceptors>
+    .....
+    <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+      <property name="paramName" value="lang" />
+    </bean>
+  </mvc:interceptors>
+  .....
+</beans>

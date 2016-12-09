@@ -1,0 +1,13 @@
+<!-- 예제 13-16: 사용자 지정 변환기를 FormattingConversionService에 등록하는 방법 -->
+     
+<mvc:annotation-driven conversion-service="myConversionService" />
+
+<bean id="myConversionService"
+      class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+  <property name="converters">
+    <set>
+      <bean class="sample.spring.chapter13.converter.IdToFixedDepositDetailsConverter" />
+    </set>
+  </property>
+  .....
+</bean>

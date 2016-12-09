@@ -1,0 +1,14 @@
+<!-- 예제 13-6: web.xml - 비동기 요청 처리를 위한 구성 -->
+
+<web-app .....
+    xsi:schemaLocation="java.sun.com/xml/ns/javaee java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+  .....
+  <servlet>
+    <servlet-name>bankapp</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    .....
+    <async-supported>true</async-supported>
+  </servlet>
+  .....
+</web-app>

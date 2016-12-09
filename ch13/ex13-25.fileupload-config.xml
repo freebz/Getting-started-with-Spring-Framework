@@ -1,0 +1,7 @@
+<!-- 예제 13-25: fileupload-config.xml - CommonsMultipartResolver 구성 -->
+
+<bean id="multipartResolver"
+      class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+  <property name="maxUploadSize" value="100000" />
+  <property name="resolveLazily" value="true" />
+</bean>
