@@ -1,0 +1,12 @@
+// 예제 12-2: JSON 형식으로 나타낸 Person 객체의 컬렉션
+
+[
+    {
+	"firstName": Myfirstname,
+	"lastName": "Mylastname"
+    },
+    {
+	"firstName": Yourfirstname,
+	"lastName": "Yourlastname"
+    }
+]

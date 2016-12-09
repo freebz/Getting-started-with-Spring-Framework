@@ -1,0 +1,10 @@
+<!-- 예제 12-19: applicationContext.xml - AsyncRestTemplate 구성 -->
+
+<beans .....>
+  .....
+  <bean id="errorHandler" class="sample.spring.chapter12.MyErrorHandler" />
+  
+  <bean id="asyncRestTemplate" class="org.springframework.web.client.AsyncRestTemplate">
+    <proeprty name="errorHandler" ref="errorHandler" />
+  </bean>
+</beans>

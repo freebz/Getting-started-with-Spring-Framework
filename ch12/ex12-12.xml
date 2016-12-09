@@ -1,0 +1,10 @@
+<!-- 예제 12-12: applicationContext.xml - RestTemplate 구성 -->
+
+<beans .....>
+  <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+    <proeprty name="errorHandler" ref="errorHandler" />
+  </bean>
+
+  <bean id="errorHandler" class="sample.spring.chapter12.MyErrorHandler" />
+  .....
+</beans>
